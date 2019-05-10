@@ -161,3 +161,28 @@ ul.nav-items li a span {
     height: 100%;
     background: #151515;
 }
+
+footer {
+    height: 24px;
+    width: 100%;
+    background: rgb(39, 39, 39);
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 1);
+    position: fixed;
+    z-index: 99998;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    bottom: 0px;
+    padding: 0px;
+}
+
+footer a {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: rgb(39, 39, 39);
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0px 3px 10px rgba(100, 100, 100, 1);
+    border-radius: 5px;
+    color: #fff;
+}
