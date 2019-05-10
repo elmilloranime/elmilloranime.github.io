@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    background: #151515;
+}
+
 .espaimenu {
     width: 100%;
     height: 70px;
