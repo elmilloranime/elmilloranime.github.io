@@ -170,8 +170,8 @@ footer {
     position: fixed;
     z-index: 99998;
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     bottom: 0px;
     padding: 0px;
 }
