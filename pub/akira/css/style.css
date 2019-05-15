@@ -1,0 +1,22 @@
+html,
+body {
+    background: #fafafa;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    height: 50px;
+    max-height: 250px;
+}
+
+.headtable {
+    background: #323232;
+    color: #fafafa;
+    font-size: 110%;
+}
