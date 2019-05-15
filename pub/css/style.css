@@ -110,6 +110,14 @@
         float: left;
     }
     
+    .selectmenu {
+        margin-top: 0px;
+        width: 80%;
+        height: 100px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
     @media screen and (min-width:1600px) {
         .content p {
             width: 85%;
@@ -171,25 +179,20 @@
     
     @media screen and (max-width:779px) {
         .photo {
-            align-content: center;
-            justify-content: center;
-            float: center;
-            margin-left: 50px;
+            margin: -5px;
+            width: 99%;
+            height: 450px;
         }
         .photo img {
-            margin: auto;
-            float: center;
-            align-content: center;
-            justify-content: center;
+            width: 98%;
+            height: 100%;
         }
-        .content {
-            width: 100%;
-            align-content: center;
-            justify-content: center;
-            margin: 10px auto;
-            padding-left: 50px;
-            padding-right: 50px;
-            float: right;
+        .cover {
+            margin: 10px;
+        }
+        .content p {
+            font-size: 110%;
             color: #fff;
+            margin: 480px 10px 5px 10px;
         }
     }
