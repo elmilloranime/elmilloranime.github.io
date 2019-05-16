@@ -113,6 +113,7 @@ h2 {
 }
 
 .content p {
+    float: right;
     font-size: 110%;
     color: #fff;
     margin-top: 10px;
