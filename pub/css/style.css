@@ -117,12 +117,13 @@ h2 {
     color: #fff;
     margin-top: 10px;
     margin-bottom: 50px;
-    margin-left: 50px;
+    margin-left: 150px;
     margin-right: 50px;
     padding: 10px;
 }
 
 .selectmenu {
+    border: 0px;
     margin-top: 0px;
     width: 100%;
     height: 110px;
