@@ -112,8 +112,7 @@ h2 {
     width: 165px;
 }
 
-.content p {
-    float: right;
+.content {
     font-size: 110%;
     color: #fff;
     margin-top: 10px;
