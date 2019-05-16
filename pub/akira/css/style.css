@@ -5,31 +5,40 @@
 
 html,
 body {
-    background: #323232;
+    background: #151515;
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
 table {
-    border: 0px #323232;
-    background: #fafafa;
+    border: 1px #151515;
+    background: #151515;
     width: 100%;
 }
 
 tr {
-    border: 0px #323232;
-    background: #fafafa;
+    border: 1px #151515;
+    background: #151515;
     height: 50px;
     max-height: 250px;
+    width: 33%;
 }
 
 td {
-    border: 0px #323232;
+    border: 1px #151515;
+    width: 33%;
+    background: #3f3f3f;
+    color: white;
+}
+
+td a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .headtable {
-    background: #323232;
+    background: #151515;
     color: #fafafa;
     font-size: 110%;
 }
