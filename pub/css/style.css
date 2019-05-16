@@ -145,13 +145,16 @@ iframe {
     border: none;
 }
 
-table {
+.opcions {
+    margin-top: 100000px;
     border: 1px #151515;
     background: #151515;
     width: 100%;
+    margin-top: 0px;
+    text-align: center;
 }
 
-tr {
+.opcions tr {
     border: 1px #151515;
     background: #151515;
     height: 50px;
@@ -159,14 +162,14 @@ tr {
     width: 33%;
 }
 
-td {
+.opcions td {
     border: 1px #151515;
     width: 33%;
     background: #3f3f3f;
     color: white;
 }
 
-td a {
+.opcions td a {
     color: #fff;
     text-decoration: none;
 }
@@ -177,7 +180,4 @@ td a {
     font-size: 110%;
 }
 
-.opcions {
-    margin-top: 0px;
-    text-align: center;
-}
+.opcions {}

@@ -33,13 +33,13 @@ iframe {
     height: 25px;
 }
 
-table {
+.opcions {
     border: 1px #151515;
     background: #151515;
     width: 100%;
 }
 
-tr {
+.opcions tr {
     border: 1px #151515;
     background: #151515;
     height: 50px;
@@ -47,14 +47,14 @@ tr {
     width: 33%;
 }
 
-td {
+.opcions td {
     border: 1px #151515;
     width: 33%;
     background: #3f3f3f;
     color: white;
 }
 
-td a {
+.opcions td a {
     color: #fff;
     text-decoration: none;
 }
