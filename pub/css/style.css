@@ -118,6 +118,15 @@
         margin-right: 10%;
     }
     
+    .freespace2 {
+        width: 100%;
+        height: 40px;
+        bottom: 0px;
+        background: #151515;
+        margin: 0px;
+        padding: 0px;
+    }
+    
     @media screen and (min-width:1600px) {
         .content p {
             width: 85%;
