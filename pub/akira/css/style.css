@@ -18,9 +18,14 @@ table {
 }
 
 tr {
+    border: 1px #323232;
     background: #fafafa;
     height: 50px;
     max-height: 250px;
+}
+
+td {
+    border: 1px #323232;
 }
 
 .headtable {
