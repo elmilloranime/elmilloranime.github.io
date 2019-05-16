@@ -110,7 +110,8 @@ h2 {
     display: block;
     height: 235px;
     width: 165px;
-    margin-right: 60px;
+    margin-right: 65px;
+    margin-bottom: 25px;
 }
 
 .content {
@@ -120,6 +121,7 @@ h2 {
     margin-left: 50px;
     margin-right: 50px;
     padding: 10px;
+    padding-bottom: 0px;
 }
 
 .selectmenu {
@@ -141,4 +143,41 @@ h2 {
 iframe {
     background: #151515;
     border: none;
+}
+
+table {
+    border: 1px #151515;
+    background: #151515;
+    width: 100%;
+}
+
+tr {
+    border: 1px #151515;
+    background: #151515;
+    height: 50px;
+    max-height: 250px;
+    width: 33%;
+}
+
+td {
+    border: 1px #151515;
+    width: 33%;
+    background: #3f3f3f;
+    color: white;
+}
+
+td a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.headtable {
+    background: #202020;
+    color: #fafafa;
+    font-size: 110%;
+}
+
+.opcions {
+    margin-top: 0px;
+    text-align: center;
 }
