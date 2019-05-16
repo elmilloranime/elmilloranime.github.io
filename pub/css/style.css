@@ -110,6 +110,7 @@ h2 {
     display: block;
     height: 235px;
     width: 165px;
+    margin-left: 150px;
 }
 
 .content {
@@ -117,7 +118,7 @@ h2 {
     color: #fff;
     margin-top: 10px;
     margin-bottom: 50px;
-    margin-left: 150px;
+    margin-left: 50px;
     margin-right: 50px;
     padding: 10px;
 }
