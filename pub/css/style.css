@@ -196,7 +196,8 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 240px;
+            height: 235px;
+            width: 165px;
         }
         .cover {
             margin: 10px;
