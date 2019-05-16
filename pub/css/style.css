@@ -114,6 +114,16 @@ h2 {
     width: 165px;
 }
 
+.cover {
+    margin: 10px;
+}
+
+.content p {
+    font-size: 110%;
+    color: #fff;
+    margin: 800px 10px 10px 10px;
+}
+
 .selectmenu {
     margin-top: 0px;
     width: 80%;
@@ -129,20 +139,4 @@ h2 {
     background: #151515;
     margin: 0px;
     padding: 0px;
-}
-
-.photo {
-    margin: -5px;
-    width: 99%;
-    height: 450px;
-}
-
-.cover {
-    margin: 10px;
-}
-
-.content p {
-    font-size: 110%;
-    color: #fff;
-    margin: 800px 10px 10px 10px;
 }
