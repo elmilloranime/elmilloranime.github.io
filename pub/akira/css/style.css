@@ -5,13 +5,14 @@
 
 html,
 body {
-    background: #fafafa;
+    background: #323232;
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
 table {
+    border: 1px #323232;
     width: 100%;
 }
 
