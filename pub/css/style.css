@@ -106,10 +106,9 @@ h2 {
     align-content: center;
     justify-content: center;
     margin: 10px auto;
+    padding: 10px;
     float: left;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     height: 235px;
     width: 165px;
 }
