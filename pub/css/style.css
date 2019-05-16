@@ -105,16 +105,11 @@ h2 {
 .photo {
     align-content: center;
     justify-content: center;
-    margin: 10px auto;
-    padding: 10px;
+    margin: 10px;
     float: left;
     display: block;
     height: 235px;
     width: 165px;
-}
-
-.cover {
-    margin: 50px;
 }
 
 .content p {
