@@ -19,10 +19,10 @@
     // Identificador del ítem en Archive.org
     const identifier = '3x3eyesS01x01-hls';
     
-    // Crea un objeto IA usando iajs
-    const item = new IA(identifier);
+    // Utiliza la variable global "ia" (en minúsculas)
+    const item = new ia(identifier);
     
-    // Obtenemos la metadata (opcional, para verificar el ítem)
+    // Obtenemos la metadata (opcional)
     item.metadata().then(metadata => {
       console.log("Metadata obtenida:", metadata);
       // Construir la URL HLS (ajusta según la convención de tu ítem)
