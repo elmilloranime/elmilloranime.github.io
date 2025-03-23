@@ -1,77 +1,53 @@
 <!DOCTYPE html>
-<html lang="ca">
-
+<html lang="es">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://fonts.googleapis.com/css?family=Raleway:400,500,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <meta charset="UTF-8">
+  <title>Reproductor HLS con iajs y Proxy CORS</title>
+  <!-- Carga hls.js desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <!-- Carga iajs para navegador desde unpkg -->
+  <script src="https://unpkg.com/iajs/dist/ia.browser.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    video { max-width: 100%; height: auto; }
+  </style>
 </head>
-
 <body>
-
-    <div class="wrap">
-        <div class="menu">
-            <div class="logo">
-                <h1>
-                    <a href="./index.html">
-                        ElMillorAnime
-                    </a>
-                </h1>
-            </div>
-            <nav id="navigation">
-                <div class="control-menu">
-                    menu
-                    <a href="#navigation" class="open"><span>MENU</span></a>
-                    <a href="#" class="close"><span>CERRAR</span></a>
-                </div>
-                <ul class="nav-items">
-                    <li id="DATAPUB">
-                        <a href="./src/default.html" target="elcontingut">
-                            <span>
-                                ORDRENACIÓ PER DATA DE PUBLICACIÓ
-                            </span>
-                        </a>
-                    </li>
-                    <li id="ALFPUB">
-                        <a href="./src/alph.html" target="elcontingut">
-                            <span>
-                                ORDRENACIÓ ALFABÈTICA
-                            </span>
-                        </a>
-                    </li>
-                    <li id="SERIESPUB">
-                        <a href="./src/series.html" target="elcontingut">
-                            <span>
-                                SERIES PUBLICADES
-                            </span>
-                        </a>
-                    </li>
-                    <li id="PELISPUB">
-                        <a href="./src/pelis.html" target="elcontingut">
-                            <span>
-                                PELIS PUBLICADES
-                            </span>
-                        </a>
-                    </li>
-                    <li id="OVASPUB">
-                        <a href="./src/ovas.html" target="elcontingut">
-                            <span>
-                                OVAS PUBLICADES
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="contingut">
-            <iframe name="elcontingut" src="./src/default.html"></iframe>
-        </div>
-    </div>
-    <footer>
-        <a href="https://raw.githubusercontent.com/elmilloranime/elmilloranime.github.io/master/TOS" target="_blank"> TOS </a>
-        <a href="https://raw.githubusercontent.com/elmilloranime/elmilloranime.github.io/master/FAQ" target="_blank"> FAQ </a>
-        <a href="https://raw.githubusercontent.com/elmilloranime/elmilloranime.github.io/master/INFOPROJECTE" target="_blank"> INFO PROJECTE </a>
-    </footer>
+  <h1>Reproductor HLS desde Archive.org</h1>
+  <video id="video" controls></video>
+  <script>
+    // Identificador del ítem en Archive.org
+    const identifier = '3x3eyesS01x01-hls';
+    
+    // Crea un objeto IA usando iajs
+    const item = new IA(identifier);
+    
+    // Obtenemos la metadata (opcional, para verificar el ítem)
+    item.metadata().then(metadata => {
+      console.log("Metadata obtenida:", metadata);
+      // Construir la URL HLS (ajusta según la convención de tu ítem)
+      const hlsUrl = `https://archive.org/download/${identifier}/master.m3u8`;
+      
+      // Usar el Cloudflare Worker como proxy CORS
+      const proxyUrl = 'https://archive.elmilloranime.workers.dev/?url=' + encodeURIComponent(hlsUrl);
+      
+      const video = document.getElementById('video');
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(proxyUrl);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          video.play();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = proxyUrl;
+        video.addEventListener('loadedmetadata', function() {
+          video.play();
+        });
+      }
+    }).catch(err => {
+      console.error("Error al obtener metadata:", err);
+    });
+  </script>
 </body>
-
 </html>
